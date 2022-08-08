@@ -16,6 +16,119 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+
+      @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+        font-family: 'League Spartan', sans-serif;
+      }
+      p{
+        font-size: 18px;
+      }
+      .social-proof{
+        max-width: 1440px;
+        height: 800px;
+        margin: 0 auto;
+        background-color: hsl(0,0%,100%);
+        background-image: url('images/bg-pattern-top-desktop.svg'),
+        url('images/bg-pattern-bottom-desktop.svg');
+        background-position: top 0px left 0px , bottom 0px right 0px;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .part1,.part2{
+        width: 1115px;
+      }
+      .part1,.reviews{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .user{
+        width: 415px;
+        height: 250px;
+      }
+      .user h1{
+        font-size: 50px;
+        margin-bottom: 15px;
+        color: hsl(300, 43%, 22%);
+        line-height: 45px;
+      }
+      .user p{
+        font-size: 18px;
+        color: hsl(303, 10%, 53%);
+      }
+      .stars{
+        width: 550px;
+      }
+      .star1,.star2,.star3{
+        width: 450px;
+        padding: 20px 0px;
+        background-color: hsl(300,24%,96%);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px 0px;
+        border-radius: 10px;
+      }
+      .star1 p,.star2 p,.star3 p {
+        margin: 0px 20px;
+        font-size: 18px;
+        color: hsl(300,43%,22%);
+      }
+      .star2{
+        margin-left: 50px;
+      }
+      .star3{
+        margin-left: 100px;
+      }
+      .card{
+        width: 350px;
+        height: 225px;
+        padding: 15px 30px;
+        background-color: hsl(300, 43%, 22%);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+      }
+      .reviewOne{
+        margin-right: 10px;
+      }
+      .reviewTwo{
+        margin-top: 18px;
+        margin-right: 10px;
+      }
+      .reviewThree{
+        margin-top: 33px;
+      }
+      .card .userName{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .card .userName img{
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+      .card .userName .name p{
+        color: hsl(0,0%,100%);
+        font-weight: 400;
+      }
+      .card .userName .name .verify{
+        color: hsl(333,80%,67%);
+      }
+      .card .quote{
+        color: hsl(0,0%,100%);
+        font-size: 17px;
+      }
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -23,39 +136,165 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+      @media screen and (max-width: 900px) {
+        .social-proof{
+          max-width: 375px;
+          height: 1530px;
+          background-image: url('images/bg-pattern-top-mobile.svg'),
+          url('images/bg-pattern-bottom-mobile.svg');
+          background-position: top 0px left 0px , bottom 0px right 0px;
+          background-repeat: no-repeat;
+        }
+        .part1,.part2{
+          width: auto;
+        }
+        .part1,.reviews{
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .user{
+          width: 325px;
+          height: 250px;
+          text-align: center;
+        }
+        .stars{
+          width: 325px;
+        }
+        .star1,.star2,.star3{
+          width: auto;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .star1 p,.star2 p,.star3 p{
+          margin: 0px 0px;
+        }
+        .star2{
+          margin-left: 0px;
+        }
+        .star3{
+          margin-left: 0px;
+        }
+        .card{
+          width: 275px;
+          padding: 0px 25px;
+        }
+        .reviewOne{
+        margin-right: 0px;
+        }
+        .reviewTwo{
+          margin-top: 15px;
+          margin-right: 0px;
+        }
+        .reviewThree{
+          margin-top: 15px;
+        }
+      }
     </style>
   </head>
   <body>
-    10,000+ of our users love our products.
-
-    We only provide great products combined with excellent customer service.
-    See what our satisfied customers are saying about our services.
-    
-    Rated 5 Stars in Reviews
-    Rated 5 Stars in Report Guru
-    Rated 5 Stars in BestTech
-    
-    Colton Smith 
-    Verified Buyer
-    "We needed the same printed design as the one we had ordered a week prior.
-    Not only did they find the original order, but we also received it in time.
-    Excellent!"
-    
-    Irene Roberts 
-    Verified Buyer
-    "Customer service is always excellent and very quick turn around. Completely
-    delighted with the simplicity of the purchase and the speed of delivery."
-    
-    Anne Wallace 
-    Verified Buyer
-    "Put an order with this company and can only praise them for the very high
-    standard. Will definitely use them again and recommend them to everyone!"
-
+    <section class="social-proof">
+      <div class="part1">
+        <div class="user">
+          <h1>10,000+ of our users love our products.</h1>
+          <p>
+            We only provide great products combined with excellent customer service.
+            See what our satisfied customers are saying about our services.
+          </p>
+        </div>
+        <!-- end of user -->
+        <div class="stars">
+          <div class="star1">
+            <p>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+            </p>
+            <p>
+              Rated 5 Stars in Reviews
+            </p>
+          </div>
+          <div class="star2">
+            <p>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+            </p>
+            <p> 
+              Rated 5 Stars in Report Guru
+            </p>
+          </div>
+          <div class="star3">
+            <p>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+            </p>
+            <p>
+              Rated 5 Stars in BestTech
+            </p>
+          </div>
+        </div>
+        <!-- end of stars -->
+      </div>
+      <!-- end of part 1 -->
+      <div class="part2">
+        <div class="reviews">
+          <div class="reviewOne card">
+            <div class="userName">
+              <img src="images/image-colton.jpg" alt="user image">
+              <div class="name">
+                <p>Colton Smith </p>
+                <P class="verify">Verified Buyer</P>
+              </div>
+            </div>
+            <p class="quote">
+              "We needed the same printed design as the one we had ordered a week prior.
+      Not only did they find the original order, but we also received it in time.
+      Excellent!"
+            </p>
+          </div>
+          <div class="reviewTwo card">
+            <div class="userName">
+              <img src="images/image-irene.jpg" alt="user image">
+              <div class="name">
+                <p>Irene Roberts</p>
+                <P class="verify">Verified Buyer</P>
+              </div>
+            </div>
+            <p class="quote">
+              "Customer service is always excellent and very quick turn around. Completely
+      delighted with the simplicity of the purchase and the speed of delivery."
+            </p>
+          </div>
+          <div class="reviewThree card">
+            <div class="userName">
+              <img src="images/image-anne.jpg" alt="user image">
+              <div class="name">
+                <p>Anne Wallace </p>
+                <P class="verify">Verified Buyer</P>
+              </div>
+            </div>
+            <p class="quote">
+              "Put an order with this company and can only praise them for the very high
+      standard. Will definitely use them again and recommend them to everyone!"
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end of part 2 -->
+    </section>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Imran Hossain</a>.
     </div>
   </body>
 </html>
